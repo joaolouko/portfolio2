@@ -1,6 +1,6 @@
-import Footer from "./components/layout/Footer";
-import Header from "./components/layout/Header";
-import Main from "./components/layout/Main";
+import Footer from "./layout/Footer";
+import Header from "./layout/Header";
+import Main from "./layout/Main";
 import './i18n';
 
 
