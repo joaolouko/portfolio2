@@ -1,0 +1,14 @@
+{
+  "header": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+   "main": {
+    "aboutMe": "About me"
+  },
+  "footer": {
+    "copyright": "John pires. All rights reserved."
+  }
+}
