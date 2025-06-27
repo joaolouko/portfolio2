@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from "../hooks/useLanguage";
 import FotoPerfil from "../img/perfil.jpeg";
 import { useEffect, useState } from "react";
+import '../styles/variables.scss'; // Importando o arquivo SCSS para aplicar as variáveis
 
 export default function Main() {
     const { currentLanguage, t } = useLanguage();
@@ -20,8 +21,8 @@ export default function Main() {
     const projects = [
         {
             name: 'Sistema de Reserva de Salas IFC',
-            description: 'Um Projeto feito com TCC, utilizando React, Node.js e MongoDB.',
-            link: 'https://github.com/joaolouko/app',
+            description: 'Um Projeto feito como TCC, utilizando React, Node.js e MongoDB.',
+            link: 'https://github.com/joaolouko/rooms-reservations',
         },
         {
             name: 'Project Two',
@@ -43,6 +44,7 @@ export default function Main() {
         'Git / Github',
         'MongoDB',
         'MySQL',
+        'PostgreSQL',
     ];
 
     return (
@@ -79,19 +81,19 @@ export default function Main() {
                     <p>{t("main.title")}</p>
                 </section>
                 <section id="about" className="mb-16 scroll-mt-20">
-                    <h2 className="text-4xl font-bold mb-4 border-b-4 border-indigo-500 inline-block pb-1">{t('main.aboutMe')}</h2>
+                    <h2 className="text-4xl font-bold mb-4 border-b-4 color-secondary-border inline-block pb-1">{t('main.aboutMe')}</h2>
                     <p className="text-gray-300 leading-relaxed">
                         {t("main.aboutMeText")}
                     </p>
                 </section>
 
                 <section id="skills" className="mb-16 scroll-mt-20">
-                    <h2 className="text-4xl font-bold mb-6 border-b-4 border-indigo-500 inline-block pb-1">Skills</h2>
+                    <h2 className="text-4xl font-bold mb-6 border-b-4 color-secondary-border inline-block pb-1">Skills</h2>
                     <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                         {skills.map((skill) => (
                             <li
                                 key={skill}
-                                className="bg-gray-800 rounded-lg text-center py-3 text-indigo-400 font-semibold shadow-md hover:bg-indigo-500 hover:text-gray-900 transition-colors cursor-default"
+                                className="color-header-footer rounded-lg text-center py-3 color-primary font-semibold shadow-md color-secondary-hover hover:text-gray-900 transition-colors cursor-default"
                             >
                                 {skill}
                             </li>
@@ -100,14 +102,14 @@ export default function Main() {
                 </section>
 
                 <section id="projects" className="mb-16 scroll-mt-20">
-                    <h2 className="text-4xl font-bold mb-6 border-b-4 border-indigo-500 inline-block pb-1">Projects</h2>
+                    <h2 className="text-4xl font-bold mb-6 border-b-4 color-secondary-border inline-block pb-1">Projects</h2>
                     <div className="space-y-8">
                         {projects.map(({ name, description, link }) => (
                             <div
                                 key={name}
-                                className="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-indigo-500 transition-shadow"
+                                className="color-header-footer rounded-lg p-6 shadow-lg hover:shadow-indigo-500 transition-shadow"
                             >
-                                <h3 className="text-2xl font-semibold text-indigo-400 mb-2">{name}</h3>
+                                <h3 className="text-2xl font-semibold color-secondary mb-2">{name}</h3>
                                 <p className="text-gray-300 mb-4">{description}</p>
                                 <a
                                     href={link}
@@ -126,11 +128,11 @@ export default function Main() {
                 </section>
 
                 <section id="contact" className="mb-16 scroll-mt-20">
-                    <h2 className="text-4xl font-bold mb-6 border-b-4 border-indigo-500 inline-block pb-1">Contact</h2>
+                    <h2 className="text-4xl font-bold mb-6 border-b-4 color-secondary-border inline-block pb-1">Contact</h2>
                     <p className="mb-4 text-gray-300">
                         Feel free to reach out to me via email or connect on LinkedIn.
                     </p>
-                    <ul className="space-y-2 text-indigo-400 font-semibold">
+                    <ul className="space-y-2 color-secondary font-semibold">
                         <li>
                             Email: <a href="mailto:your.email@example.com" className="hover:underline">your.email@example.com</a>
                         </li>

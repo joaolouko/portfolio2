@@ -1,0 +1,31 @@
+$color-backgroud: #000000;
+$color-header: #0f0f0f;
+$color-primary: #227e17;
+$color-secondary: #379f2b;
+
+.color-background {
+  background-color: $color-backgroud;
+}
+
+.color-header-footer {
+  background-color: $color-header;
+}
+
+:hover.color-primary-hover {
+  color: $color-primary;
+}
+
+.color-primary {
+  color: $color-primary;
+}
+
+:hover.color-secondary-hover {
+  color: $color-secondary;
+}
+.color-secondary {
+  color: $color-secondary;
+}
+
+.color-secondary-border {
+  border-color: $color-secondary;
+}
