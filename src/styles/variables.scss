@@ -29,3 +29,17 @@ $color-secondary: #379f2b;
 .color-secondary-border {
   border-color: $color-secondary;
 }
+
+.link-secondary {
+  color: $color-secondary;
+  transition: all 0.3s ease;
+}
+
+:hover.link-secondary {
+  
+  color: darken($color-secondary, 10%);
+}
+
+:hover.shadow-secondary {
+  box-shadow: 0 4px 6px -1px rgba($color-secondary, 0.1), 0 10px 20px 1px rgba($color-secondary, 0.5);
+}

@@ -5,15 +5,22 @@
     "projects": "Projects",
     "contact": "Contact"
   },
-   "main": {
+  "main": {
     "role1": "Software Engineer",
     "role2": "Full Stack Developer",
     "role3": "Mobile Developer",
     "title": "Welcome to my dev portfolio. Here I will show you my most relevant projects in the dev area, my skills with technology and my experience in the area. This portfolio will be updated frequently so that you can follow my most recent projects.",
     "aboutMe": "About me",
-    "aboutMeText": "I'm João Pires, a developer from Torres, Brazil. I've had a passion for technology since I was a child, and the development area has only fueled this passion."
+    "aboutMeText": "I'm João Pires, a developer from Torres, Brazil. I've had a passion for technology since I was a child, and the development area has only fueled this passion.",
+    "skillsTitle": "Skills",
+    "projectsTitle": "Projects",
+    "contactTitle": "Contact",
+    "contactText": "Feel free to reach out to me via email or connect on LinkedIn.",
+    "project1": "A TCC project using React, Node.js and MongoDB.",
+    "project2": "A simple bill management and organization project.",
+    "project3": "Fullstack app with Node.js and React."
   },
   "footer": {
-    "copyright": "John pires. All rights reserved."
+    "copyright": "John Dev. All rights reserved."
   }
 }

@@ -3,35 +3,34 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from "../hooks/useLanguage";
 import FotoPerfil from "../img/perfil.jpeg";
 import { useEffect, useState } from "react";
-import '../styles/variables.scss'; // Importando o arquivo SCSS para aplicar as variáveis
+import '../styles/variables.scss';
 
 export default function Main() {
     const { currentLanguage, t } = useLanguage();
-    const phrases = [t("main.role1"), t("main.role2"), t("main.role3")]; // defina no seu arquivo de tradução
+    const phrases = [t("main.role1"), t("main.role2"), t("main.role3")];
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
             setIndex((prev) => (prev + 1) % phrases.length);
-        }, 2000); // troca a cada 3 segundos
-
+        }, 2000);
         return () => clearInterval(interval);
     }, [phrases.length]);
 
     const projects = [
         {
             name: 'Sistema de Reserva de Salas IFC',
-            description: 'Um Projeto feito como TCC, utilizando React, Node.js e MongoDB.',
+            description: t("main.project1"),
             link: 'https://github.com/joaolouko/rooms-reservations',
         },
         {
-            name: 'Project Two',
-            description: 'Another project showcasing API integration.',
-            link: 'https://github.com/username/project-two',
+            name: 'BillstoPay',
+            description: t("main.project2"),
+            link: 'https://github.com/joaolouko/billstopay',
         },
         {
-            name: 'Project Three',
-            description: 'Fullstack app with Node.js and React.',
+            name: 'Portfolio',
+            description: t("main.project3"),
             link: 'https://github.com/username/project-three',
         },
     ];
@@ -55,8 +54,8 @@ export default function Main() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
-                className="container mx-auto px-6 py-12 max-w-4xl">
-
+                className="container mx-auto px-6 py-12 max-w-4xl"
+            >
                 <section className="flex flex-col items-center">
                     <img
                         src={FotoPerfil}
@@ -76,23 +75,26 @@ export default function Main() {
                         </motion.h1>
                     </AnimatePresence>
 
-
-
                     <p>{t("main.title")}</p>
                 </section>
+
                 <section id="about" className="mb-16 scroll-mt-20">
-                    <h2 className="text-4xl font-bold mb-4 border-b-4 color-secondary-border inline-block pb-1">{t('main.aboutMe')}</h2>
+                    <h2 className="text-4xl font-bold mb-4 border-b-4 color-secondary-border inline-block pb-1">
+                        {t('main.aboutMe')}
+                    </h2>
                     <p className="text-gray-300 leading-relaxed">
                         {t("main.aboutMeText")}
                     </p>
                 </section>
 
                 <section id="skills" className="mb-16 scroll-mt-20">
-                    <h2 className="text-4xl font-bold mb-6 border-b-4 color-secondary-border inline-block pb-1">Skills</h2>
+                    <h2 className="text-4xl font-bold mb-6 border-b-4 color-secondary-border inline-block pb-1">
+                        {t("main.skillsTitle")}
+                    </h2>
                     <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                        {skills.map((skill) => (
+                        {skills.map((skill, i) => (
                             <li
-                                key={skill}
+                                key={i}
                                 className="color-header-footer rounded-lg text-center py-3 color-primary font-semibold shadow-md color-secondary-hover hover:text-gray-900 transition-colors cursor-default"
                             >
                                 {skill}
@@ -102,12 +104,14 @@ export default function Main() {
                 </section>
 
                 <section id="projects" className="mb-16 scroll-mt-20">
-                    <h2 className="text-4xl font-bold mb-6 border-b-4 color-secondary-border inline-block pb-1">Projects</h2>
+                    <h2 className="text-4xl font-bold mb-6 border-b-4 color-secondary-border inline-block pb-1">
+                        {t("main.projectsTitle")}
+                    </h2>
                     <div className="space-y-8">
                         {projects.map(({ name, description, link }) => (
                             <div
                                 key={name}
-                                className="color-header-footer rounded-lg p-6 shadow-lg hover:shadow-indigo-500 transition-shadow"
+                                className="color-header-footer rounded-lg p-6 shadow-lg shadow-secondary transition-shadow"
                             >
                                 <h3 className="text-2xl font-semibold color-secondary mb-2">{name}</h3>
                                 <p className="text-gray-300 mb-4">{description}</p>
@@ -115,12 +119,11 @@ export default function Main() {
                                     href={link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-block text-indigo-600 hover:text-indigo-400 font-semibold"
+                                    className="inline-block link-secondary hover:text-indigo-400 font-semibold"
                                 >
                                     <span className="flex items-center gap-2">
                                         <FaGithub /> View on GitHub &rarr;
                                     </span>
-
                                 </a>
                             </div>
                         ))}
@@ -128,40 +131,45 @@ export default function Main() {
                 </section>
 
                 <section id="contact" className="mb-16 scroll-mt-20">
-                    <h2 className="text-4xl font-bold mb-6 border-b-4 color-secondary-border inline-block pb-1">Contact</h2>
-                    <p className="mb-4 text-gray-300">
-                        Feel free to reach out to me via email or connect on LinkedIn.
-                    </p>
+                    <h2 className="text-4xl font-bold mb-6 border-b-4 color-secondary-border inline-block pb-1">
+                        {t("main.contactTitle")}
+                    </h2>
+                    <p className="mb-4 text-gray-300">{t("main.contactText")}</p>
                     <ul className="space-y-2 color-secondary font-semibold">
                         <li>
-                            Email: <a href="mailto:your.email@example.com" className="hover:underline">your.email@example.com</a>
-                        </li>
-                        <li>
-                            LinkedIn:{' '}
+                            Email:{" "}
                             <a
-                                href="https://linkedin.com/in/yourprofile"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                href="mailto:joaopiresmachadonunes@gmail.com"
                                 className="hover:underline"
                             >
-                                linkedin.com/in/yourprofile
+                                joaopiresmachadonunes@gmail.com
                             </a>
                         </li>
                         <li>
-                            GitHub:{' '}
+                            LinkedIn:{" "}
                             <a
-                                href="https://github.com/yourusername"
+                                href="https://www.linkedin.com/in/jo%C3%A3o-pires-088452211/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="hover:underline"
                             >
-                                github.com/yourusername
+                                linkedin.com/in/joão-pires
+                            </a>
+                        </li>
+                        <li>
+                            GitHub:{" "}
+                            <a
+                                href="https://github.com/joaolouko"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:underline"
+                            >
+                                github.com/joaolouko
                             </a>
                         </li>
                     </ul>
                 </section>
             </motion.main>
         </AnimatePresence>
-
-    )
+    );
 }

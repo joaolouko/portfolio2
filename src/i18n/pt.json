@@ -11,9 +11,16 @@
     "role3": "Desenvolvedor Mobile",
     "title": "Bem-vindo ao meu portfólio de desenvolvimento. Aqui, mostrarei meus projetos mais relevantes na área de desenvolvimento, minhas habilidades com tecnologia e minha experiência na área. Este portfólio será atualizado com frequência para que você possa acompanhar meus projetos mais recentes.",
     "aboutMe": "Sobre mim",
-    "aboutMeText": "Sou João Pires, desenvolvedor de Torres, Brasil. Sou apaixonado por tecnologia desde criança, e a área de desenvolvimento só alimentou essa paixão."
+    "aboutMeText": "Sou João Pires, desenvolvedor de Torres, Brasil. Sou apaixonado por tecnologia desde criança, e a área de desenvolvimento só alimentou essa paixão.",
+    "skillsTitle": "Habilidades",
+    "projectsTitle": "Projetos",
+    "contactTitle": "Contato",
+    "contactText": "Sinta-se à vontade para me contatar por e-mail ou conectar pelo LinkedIn.",
+    "project1": "Um Projeto feito como TCC, utilizando React, Node.js e MongoDB.",
+    "project2": "Projeto para gerenciamento e organização de contas (Simples).",
+    "project3": "Aplicação Fullstack com Node.js e React."
   },
   "footer": {
-    "copyright": "John Pires. Todos os direitos reservados."
+    "copyright": "John Dev. Todos os direitos reservados."
   }
 }
