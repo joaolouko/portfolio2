@@ -2,10 +2,7 @@ import {
   FaGithub,
   FaReact,
   FaNodeJs,
-  FaGitAlt,
-  FaDatabase,
-  FaCss3Alt,
-  FaJsSquare
+  FaGitAlt
 } from "react-icons/fa";
 import {
   SiTypescript,
