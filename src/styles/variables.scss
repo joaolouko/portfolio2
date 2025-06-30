@@ -37,7 +37,7 @@ $color-secondary: #379f2b;
 
 :hover.link-secondary {
   
-  color: darken($color-secondary, 10%);
+  color: $color-primary;
 }
 
 :hover.shadow-secondary {
