@@ -16,9 +16,10 @@
     "projectsTitle": "Projects",
     "contactTitle": "Contact",
     "contactText": "Feel free to reach out to me via email or connect on LinkedIn.",
-    "project1": "A TCC project using React, Node.js and MongoDB.",
-    "project2": "A simple bill management and organization project.",
-    "project3": "Fullstack app with Node.js and React."
+    "project1": "A College project for reservations, using React, Node.js and MongoDB.",
+    "project2": "A simple bill management and organization project, using React, Node.js and MySQL.",
+    "project3": "Personal developer portfolio, using React and Tailwind.",
+    "project4": "First version of the personal portfolio, using React and Bootstrap."
   },
   "footer": {
     "copyright": "John Dev. All rights reserved."
