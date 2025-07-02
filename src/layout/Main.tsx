@@ -62,13 +62,13 @@ export default function Main() {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.3 }}
-        className="container mx-auto px-6 py-12 max-w-4xl"
+        className="container mx-auto px-4 sm:px-6 py-12 max-w-4xl"
       >
         <section className="flex flex-col items-center">
           <img
             src={FotoPerfil}
             alt="Foto de perfil"
-            className="w-50 h-50 object-cover rounded-full"
+            className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-cover rounded-full"
           />
           <AnimatePresence mode="wait">
             <motion.h1

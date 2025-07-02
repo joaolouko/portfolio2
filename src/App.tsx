@@ -7,7 +7,7 @@ import './styles/variables.scss';
 
 export default function App() {
   return (
-    <div className="color-background text-gray-100 min-h-screen font-sans scroll-smooth">
+    <div className="color-background text-gray-100 font-sans scroll-smooth overflow-x-hidden">
       <Header />
       <Main />
       <Footer />
