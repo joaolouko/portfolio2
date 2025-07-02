@@ -83,14 +83,14 @@ export default function Main() {
             </motion.h1>
           </AnimatePresence>
 
-          <p>{t("main.title")}</p>
+          <p className="text-justify">{t("main.title")}</p>
         </section>
 
         <section id="about" className="mb-16 scroll-mt-20">
           <h2 className="text-4xl font-bold mb-4 border-b-4 color-secondary-border inline-block pb-1">
             {t("main.aboutMe")}
           </h2>
-          <p className="text-gray-300 leading-relaxed">
+          <p className="text-gray-300 leading-relaxed text-justify">
             {t("main.aboutMeText")}
           </p>
         </section>
@@ -134,7 +134,7 @@ export default function Main() {
                 className="color-header-footer rounded-lg p-6 shadow-lg shadow-secondary transition-shadow"
               >
                 <h3 className="text-2xl font-semibold color-secondary mb-2">{name}</h3>
-                <p className="text-gray-300 mb-4">{description}</p>
+                <p className="text-gray-300 mb-4 text-justify">{description}</p>
                 <a
                   href={link}
                   target="_blank"
@@ -154,7 +154,7 @@ export default function Main() {
           <h2 className="text-4xl font-bold mb-6 border-b-4 color-secondary-border inline-block pb-1">
             {t("main.contactTitle")}
           </h2>
-          <p className="mb-4 text-gray-300">{t("main.contactText")}</p>
+          <p className="mb-4 text-gray-300 text-justify">{t("main.contactText")}</p>
           <ul className="space-y-2 color-secondary font-semibold">
             <li>
               Email:{" "}
