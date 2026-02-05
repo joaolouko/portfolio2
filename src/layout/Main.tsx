@@ -2,7 +2,8 @@ import {
   FaGithub,
   FaReact,
   FaNodeJs,
-  FaGitAlt
+  FaGitAlt,
+  FaGlobe
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -10,7 +11,10 @@ import {
   SiMongodb,
   SiMysql,
   SiPostgresql,
-  SiJavascript
+  SiJavascript,
+  SiFlutter,
+  SiSqlite,
+  SiDotnet
 } from "react-icons/si";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -48,9 +52,10 @@ export default function Main() {
       link: "https://github.com/joaolouko/portfolio2",
     },
     {
-        name: "Portfolio V1",
-        description: t("main.project4"),
-        link: "https://github.com/joaolouko/portfolio",
+      name: "Portfolio V1",
+      description: t("main.project4"),
+      link: "https://github.com/joaolouko/portfolio",
+      web: "https://portoliov1-johndev.netlify.app/"
     }
   ];
 
@@ -96,31 +101,34 @@ export default function Main() {
         </section>
 
         <section id="skills" className="mb-16 scroll-mt-20">
-  <h2 className="text-4xl font-bold mb-6 border-b-4 color-secondary-border inline-block pb-1">
-    {t("main.skillsTitle")}
-  </h2>
-  <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-    {[
-      { name: "JavaScript", icon: <SiJavascript size={32} color="#f7df1e" /> },
-      { name: "TypeScript", icon: <SiTypescript size={32} color="#3178C6" /> },
-      { name: "React / React Native", icon: <FaReact size={32} color="#61DAFB" /> },
-      { name: "Node.js / Express", icon: <FaNodeJs size={32} color="#68A063" /> },
-      { name: "Tailwind CSS", icon: <SiTailwindcss size={32} color="#38BDF8" /> },
-      { name: "Git / GitHub", icon: <FaGitAlt size={32} color="#F05032" /> },
-      { name: "MongoDB", icon: <SiMongodb size={32} color="#47A248" /> },
-      { name: "MySQL", icon: <SiMysql size={32} color="#00758F" /> },
-      { name: "PostgreSQL", icon: <SiPostgresql size={32} color="#336791" /> },
-    ].map(({ name, icon }, i) => (
-      <li
-        key={i}
-        className="flex flex-col items-center justify-center gap-2 bg-white/10 rounded-xl py-5 px-4 text-white font-semibold shadow-md hover:bg-white/20 transition-colors duration-200 cursor-default"
-      >
-        {icon}
-        <span className="text-sm text-center">{name}</span>
-      </li>
-    ))}
-  </ul>
-</section>
+          <h2 className="text-4xl font-bold mb-6 border-b-4 color-secondary-border inline-block pb-1">
+            {t("main.skillsTitle")}
+          </h2>
+          <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+            {[
+              { name: "C# / .NET", icon: <SiDotnet size={32} color="#512BD4" /> },
+              { name: "Flutter / Dart", icon: <SiFlutter size={32} color="#02569B" /> },
+              { name: "PostgreSQL", icon: <SiPostgresql size={32} color="#336791" /> },
+              { name: "SQLite", icon: <SiSqlite size={32} color="#003B57" /> },
+              { name: "TypeScript", icon: <SiTypescript size={32} color="#3178C6" /> },
+              { name: "Tailwind CSS", icon: <SiTailwindcss size={32} color="#38BDF8" /> },
+              { name: "React / React Native", icon: <FaReact size={32} color="#61DAFB" /> },
+              { name: "JavaScript", icon: <SiJavascript size={32} color="#f7df1e" /> },
+              { name: "Node.js / Express", icon: <FaNodeJs size={32} color="#68A063" /> },
+              { name: "MongoDB", icon: <SiMongodb size={32} color="#47A248" /> },
+              { name: "MySQL", icon: <SiMysql size={32} color="#00758F" /> },
+              { name: "Git / GitHub", icon: <FaGitAlt size={32} color="#F05032" /> },
+            ].map(({ name, icon }, i) => (
+              <li
+                key={i}
+                className="flex flex-col items-center justify-center gap-2 bg-white/10 rounded-xl py-5 px-4 text-white font-semibold shadow-md hover:bg-white/20 transition-colors duration-200 cursor-default"
+              >
+                {icon}
+                <span className="text-sm text-center">{name}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
 
 
         <section id="projects" className="mb-16 scroll-mt-20">
@@ -128,23 +136,37 @@ export default function Main() {
             {t("main.projectsTitle")}
           </h2>
           <div className="space-y-8">
-            {projects.map(({ name, description, link }) => (
+            {projects.map(({ name, description, link, web }) => (
               <div
                 key={name}
                 className="color-header-footer rounded-lg p-6 shadow-lg shadow-secondary transition-shadow"
               >
                 <h3 className="text-2xl font-semibold color-secondary mb-2">{name}</h3>
                 <p className="text-gray-300 mb-4 text-justify">{description}</p>
-                <a
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block link-secondary hover:text-indigo-400 font-semibold"
-                >
-                  <span className="flex items-center gap-2">
-                    <FaGithub /> View on GitHub &rarr;
-                  </span>
-                </a>
+                <div className="flex justify-between max-w-60">
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block link-secondary hover:text-indigo-400 font-semibold mr-2"
+                  >
+                    <span className="flex items-center gap-2">
+                      <FaGithub />&rarr; GitHub
+                    </span>
+                  </a>
+                  {web && (
+                    <a
+                      href={web}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block link-secondary hover:text-indigo-400 font-semibold"
+                    >
+                      <span className="flex items-center gap-2">
+                        <FaGlobe />&rarr; Web
+                      </span>
+                    </a>
+                  )}
+                </div>
               </div>
             ))}
           </div>
