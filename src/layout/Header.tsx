@@ -15,7 +15,7 @@ export default function Header() {
         transition={{ duration: 0.3 }}
         className="sticky top-0 color-header-footer bg-opacity-90 backdrop-blur-md z-50 shadow">
         <nav className="container mx-auto flex flex-wrap justify-between items-center px-4 py-4">
-          <h1 className="text-2xl font-bold color-primary cursor-default">John Dev</h1>
+          <h1 className="text-2xl font-bold color-primary cursor-default">João Pires Dev</h1>
           <ul className="hidden md:flex space-x-6 text-sm font-medium">
             <li><a href="#about" className="color-primary-hover transition-colors">{t('header.about')}</a></li>
             <li><a href="#skills" className="color-primary-hover transition-colors">{t('header.skills')}</a></li>
