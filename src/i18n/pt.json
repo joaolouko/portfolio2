@@ -15,11 +15,7 @@
     "skillsTitle": "Habilidades",
     "projectsTitle": "Projetos",
     "contactTitle": "Contato",
-    "contactText": "Sinta-se à vontade para me contatar por e-mail ou conectar pelo LinkedIn.",
-    "project1": "Um Projeto da faculdade para reservas, utilizando React, Node.js e MongoDB.",
-    "project2": "Projeto para gerenciamento e organização de contas, utilizando React, Node.js e MySQL.",
-    "project3": "Portfolio pessoal de desenvolvedor, utilizando React e Tailwind.",
-    "project4": "Primeira versão do portfolio pessoal, utilizando React e Bootstrap."
+    "contactText": "Sinta-se à vontade para me contatar por e-mail ou conectar pelo LinkedIn."
   },
   "footer": {
     "copyright": "João Pires Dev. Todos os direitos reservados."
